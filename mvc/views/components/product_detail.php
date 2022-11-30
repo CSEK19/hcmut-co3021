@@ -33,7 +33,7 @@
       <p><span class="mr-1"><strong><?= number_format($data["productItem"]["price"]).' đ'?></strong></span> 
       <span style="margin-left:12px; text-decoration: line-through;" class="mr-1">
         <?php
-            if($data["productItem"]["discount"] != 0) echo number_format($data["productItem"]["discount"]).' đ';
+            if($data["productItem"]["discount"] != 0 AND is_numeric($data["productItem"]["discount"])) echo number_format($data["productItem"]["discount"]).' đ';
         ?>
      </span>  
      </p>
@@ -45,7 +45,7 @@
 </section>
 <!--Section: Block Content-->
 <!-- Classic tabs -->
-<?php $countFeedback = count($data["feedbackProduct"]);?>
+<?php if($data["feedbackProduct"]) $countFeedback = count($data["feedbackProduct"]); else $countFeedback=0;?>
 <div class="classic-tabs border rounded px-4 pt-1">
 
   <ul class="nav tabs-primary nav-justified" id="advancedTab" role="tablist">
@@ -119,7 +119,7 @@
         echo            '<a id="taga" href="http://localhost/bkstore/Home/productDetail/'.$data["allProductCategory"][$i]["id"].'"><h5 class="card-title">'.$data["allProductCategory"][$i]["title"].'</h5></a>
                         <hr />';
         echo            '<span class="card-text">'.number_format($data["allProductCategory"][$i]["price"]).'đ</span>';
-        echo            '<span style="margin-left:12px; text-decoration: line-through;" class="card-text">'; if($data["allProductCategory"][$i]["discount"] != 0) echo number_format($data["allProductCategory"][$i]["discount"]).'đ'; echo '</span>';
+        echo            '<span style="margin-left:12px; text-decoration: line-through;" class="card-text">'; if($data["allProductCategory"][$i]["discount"] != 0 AND is_numeric($data["allProductCategory"][$i]["discount"])) echo number_format($data["allProductCategory"][$i]["discount"]).'đ'; echo '</span>';
         echo        '</div>';
         echo        '<button type="button" class="btnOrder btn btn-danger" onclick="addToCard('.$data["allProductCategory"][$i]["id"].')">Submit</button>';
         echo    '</div>';

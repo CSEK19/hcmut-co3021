@@ -1,6 +1,6 @@
 # hcmut-co3021
-# How to run it?
+# Getting Started
 - Clone this repo.
 - Download and install XAMPP.
-- Put this repo in `htdocs`
+- Move this repo to `/xampp/htdocs/` and rename name as `bkstore`.
  

@@ -87,7 +87,7 @@
                 echo            '<a id="taga" href="http://localhost/bkstore/Home/productDetail/'.$data["allProductCategory"][$i]["id"].'"><h5 class="card-title">'.$data["allProductCategory"][$i]["title"].'</h5></a>
                                 <hr />';
                 echo            '<span class="card-text">'.number_format($data["allProductCategory"][$i]["price"]).'đ</span>';
-                echo            '<span style="margin-left:12px; text-decoration: line-through;" class="card-text">'; if($data["allProductCategory"][$i]["discount"] != 0) echo number_format($data["allProductCategory"][$i]["discount"]).'đ'; echo '</span>';
+                echo            '<span style="margin-left:12px; text-decoration: line-through;" class="card-text">'; if($data["allProductCategory"][$i]["discount"] != 0 AND is_numeric($data["allProductCategory"][$i]["discount"])) echo number_format($data["allProductCategory"][$i]["discount"]).'đ'; echo '</span>';
                 echo        '</div>';
                 echo        '<button type="button" class="btnOrder btn btn-danger" onclick="addToCard('.$data["allProductCategory"][$i]["id"].')">Order</button>';
                 echo    '</div>';

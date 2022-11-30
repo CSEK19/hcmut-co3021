@@ -101,8 +101,9 @@
                                 $time = $_GET['vnp_PayDate'];
                                 $date_time = substr($time, 0, 4) . '-' . substr($time, 4, 2) . '-' . substr($time, 6, 2) . ' ' . substr($time, 8, 2) . ' ' . substr($time, 10, 2) . ' ' . substr($time, 12, 2);
                                 
-                                $conn = mysqli_connect('localhost', 'root', '', 'webdienthoai');
-                                mysqli_set_charset($conn, 'utf8');
+                                $conn = pg_connect("host=localhost port=5432 dbname=bkstore user=postgres password=local");
+                                pg_set_client_encoding($conn, "utf8");
+
 
                                 $user_id=36;
                                 if($_COOKIE["token"]){
@@ -110,30 +111,31 @@
                                     $sql = "SELECT user_id
                                             FROM tokens 
                                             WHERE token='$token'";
-                                    $resultset = mysqli_query($conn, $sql);
-                                    $data = mysqli_fetch_array($resultset, 1);
+                                    $resultset = pg_query($conn, $sql);
+
+                                    $data = pg_fetch_array($resultset, NULL, PGSQL_BOTH);
                                     $user_id= $data["user_id"];
                                 }
                                 
                                 //query
                                 $sql = "INSERT INTO payments(order_id, user_id, money, note,vnp_response_code,code_vnpay, code_bank, time) 
                                          VALUES ('$order_id','$user_id','$money','$note','$vnp_response_code','$code_vnpay','$code_bank','$date_time')";
-                                mysqli_query($conn, $sql);
+                                pg_query($conn, $sql);
 
                                 $sql = "SELECT id
                                         FROM orders
                                         WHERE user_id='$user_id'
                                         ORDER BY id DESC
                                         LIMIT 1";
-                                $resultset = mysqli_query($conn, $sql);
-                                $data = mysqli_fetch_array($resultset, 1);
+                                $resultset = pg_query($conn, $sql);
+                                $data = pg_fetch_array($resultset, NULL, PGSQL_BOTH);
                                 $orderId= $data["id"];
 
                                 $sql = "update orders set status = 4 where id = $orderId";
-                                mysqli_query($conn, $sql);
+                                pg_query($conn, $sql);
 
                                 //close connection
-                                mysqli_close($conn);
+                                pg_close($conn);
                                 setcookie('cart', "", -60, '/');
                                 
                                 echo "Successful";

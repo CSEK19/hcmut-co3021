@@ -9,12 +9,12 @@
                         src="https://cdn2.cellphones.com.vn/690x300/https://dashboard.cellphones.com.vn/storage/airpods-pro-2022-sliding.png" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="https://cdn2.cellphones.com.vn/690x300/https://dashboard.cellphones.com.vn/storage/apple-watch-sliding.png"
+                    <img class="d-block w-100" src="https://cdn2.cellphones.com.vn/690x300/https://dashboard.cellphones.com.vn/storage/sliding-flip-th11.jpg"
                         alt="Second slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100"
-                        src="https://cdn2.cellphones.com.vn/690x300/https://dashboard.cellphones.com.vn/storage/xiaomi-12t-sliding.jpg" alt="Third slide">
+                        src="https://cdn2.cellphones.com.vn/690x300/https://dashboard.cellphones.com.vn/storage/apple-week-th11-sliding.png" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
