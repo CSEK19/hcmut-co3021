@@ -1,0 +1,151 @@
+[
+{"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"bkstore"},
+{"type":"table","name":"category","database":"bkstore","data":
+[
+{"id":"1","name":"Vsmart"},
+{"id":"2","name":"iPhone"},
+{"id":"3","name":"Samsung"},
+{"id":"102","name":"Xiaomi"},
+{"id":"104","name":"Oppo"},
+{"id":"105","name":"Nokia"},
+{"id":"109","name":"Apple"}
+]
+}
+,{"type":"table","name":"feedback","database":"bkstore","data":
+[
+{"id":"53","note":"Chủ đề Hello- Nội dung Tester","user_id":"55","product_id":"48","created_at":"2022-12-05 07:17:08","updated_at":"2022-06-05 07:17:08","status":"0"},
+{"id":"54","note":"Good!","user_id":"55","product_id":"21","created_at":"2022-12-05 07:17:29","updated_at":"2022-06-05 07:17:29","status":"0"},
+{"id":"55","note":"Chủ đề Test_2- Nội dung None","user_id":"55","product_id":"48","created_at":"2022-12-05 07:20:33","updated_at":"2022-06-05 07:20:33","status":"0"},
+{"id":"56","note":"Chủ đề Tester- Nội dung Tester","user_id":"56","product_id":"48","created_at":"2022-12-05 07:21:07","updated_at":"2022-06-05 09:11:27","status":"0"},
+{"id":"57","note":"Chủ đề Alo- Nội dung Alo","user_id":"55","product_id":"48","created_at":"2022-12-05 09:46:55","updated_at":"2022-06-05 09:47:25","status":"0"}
+]
+}
+,{"type":"table","name":"orders","database":"bkstore","data":
+[
+{"id":"43","fullname":"tester","email":"tester@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"HCMUT","created_at":"2022-01-01 06:38:29","total_money":"169950000"},
+{"id":"44","fullname":"tester","email":"tester@gmail.com","phone":"12345","user_id":"56","status":"3","deleted":"0","address":"HCMUT2","created_at":"2022-02-02 11:39:03","total_money":"30900000"},
+{"id":"45","fullname":"tester_1","email":"tester_1@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"tester_1","created_at":"2022-03-03 06:48:12","total_money":"5490000"},
+{"id":"46","fullname":"tester2","email":"tester2@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"1234","created_at":"2022-04-04 06:51:26","total_money":"5490000"},
+{"id":"47","fullname":"tester","email":"1234@gmailc.om","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"1234","created_at":"2022-05-05 11:51:58","total_money":"25000000"},
+{"id":"48","fullname":"tester","email":"tester@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"HCMUT","created_at":"2022-06-06 07:08:56","total_money":"35050000"},
+{"id":"49","fullname":"tester","email":"tester@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"HCMUT","created_at":"2022-07-07 07:09:12","total_money":"21990000"},
+{"id":"50","fullname":"tester","email":"tester@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"1234","created_at":"2022-08-08 07:09:29","total_money":"8990000"},
+{"id":"51","fullname":"tester2","email":"tester2@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"1234","created_at":"2022-09-09 07:10:22","total_money":"6090000"},
+{"id":"52","fullname":"tester2","email":"1@yahoo.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"1234","created_at":"2022-10-10 07:11:34","total_money":"28000000"},
+{"id":"53","fullname":"tester2","email":"test@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"1234","created_at":"2022-11-11 07:11:51","total_money":"25990000"},
+{"id":"54","fullname":"tester","email":"tester@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"HCMUT","created_at":"2022-12-12 07:12:07","total_money":"115970000"},
+{"id":"55","fullname":"test_ip","email":"1234@yahoo.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"1234","created_at":"2022-06-05 14:40:25","total_money":"33990000"},
+{"id":"56","fullname":"test_ip_2","email":"tester2@gmail.com","phone":"1234","user_id":"56","status":"3","deleted":"0","address":"1234","created_at":"2022-06-05 09:40:55","total_money":"33990000"},
+{"id":"57","fullname":"tester2","email":"da@yahoo.com.vn","phone":"312312","user_id":"56","status":"3","deleted":"0","address":"123","created_at":"2022-11-08 16:21:36","total_money":"95990000"},
+{"id":"58","fullname":"user","email":"CSE@hcmtu.edu.vn","phone":"123121","user_id":"56","status":"0","deleted":"0","address":"CSE","created_at":"2022-11-30 13:16:37","total_money":"191980000"}
+]
+}
+,{"type":"table","name":"order_details","database":"bkstore","data":
+[
+{"id":"78","order_id":"43","product_id":"21","price":"33990000","num":"5","total_money":"169950000"},
+{"id":"79","order_id":"44","product_id":"1","price":"30900000","num":"1","total_money":"30900000"},
+{"id":"80","order_id":"45","product_id":"33","price":"5490000","num":"1","total_money":"5490000"},
+{"id":"81","order_id":"46","product_id":"33","price":"5490000","num":"1","total_money":"5490000"},
+{"id":"82","order_id":"47","product_id":"7","price":"25000000","num":"1","total_money":"25000000"},
+{"id":"83","order_id":"48","product_id":"7","price":"25000000","num":"1","total_money":"25000000"},
+{"id":"84","order_id":"48","product_id":"35","price":"4950000","num":"1","total_money":"4950000"},
+{"id":"85","order_id":"48","product_id":"39","price":"5100000","num":"1","total_money":"5100000"},
+{"id":"86","order_id":"49","product_id":"45","price":"21990000","num":"1","total_money":"21990000"},
+{"id":"87","order_id":"50","product_id":"34","price":"8990000","num":"1","total_money":"8990000"},
+{"id":"88","order_id":"51","product_id":"37","price":"6090000","num":"1","total_money":"6090000"},
+{"id":"89","order_id":"52","product_id":"4","price":"28000000","num":"1","total_money":"28000000"},
+{"id":"90","order_id":"53","product_id":"18","price":"25990000","num":"1","total_money":"25990000"},
+{"id":"91","order_id":"54","product_id":"6","price":"23990000","num":"1","total_money":"23990000"},
+{"id":"92","order_id":"54","product_id":"7","price":"25000000","num":"1","total_money":"25000000"},
+{"id":"93","order_id":"54","product_id":"11","price":"40990000","num":"1","total_money":"40990000"},
+{"id":"94","order_id":"54","product_id":"18","price":"25990000","num":"1","total_money":"25990000"},
+{"id":"95","order_id":"55","product_id":"21","price":"33990000","num":"1","total_money":"33990000"},
+{"id":"96","order_id":"56","product_id":"21","price":"33990000","num":"1","total_money":"33990000"},
+{"id":"97","order_id":"57","product_id":"53","price":"95990000","num":"1","total_money":"95990000"},
+{"id":"98","order_id":"58","product_id":"53","price":"95990000","num":"2","total_money":"191980000"}
+]
+}
+,{"type":"table","name":"payments","database":"bkstore","data":
+[
+
+]
+}
+,{"type":"table","name":"product","database":"bkstore","data":
+[
+{"id":"1","category_id":"2","title":"iPhone 12 Pro Max","price":"30900000","discount":"32990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/i\/p\/iphone-12-pro-max_3__10.jpg","description":"","created_at":"2021-10-22 07:46:26","updated_at":"2021-10-22 07:46:26","deleted":"0"},
+{"id":"2","category_id":"2","title":"iPhone 13 Pro | Chính hãng VN\/A","price":"30990000","discount":null,"thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/i\/p\/iphone_13-_pro-5.jpg","description":null,"created_at":"2021-10-22 12:57:16","updated_at":"2021-10-22 12:57:16","deleted":"0"},
+{"id":"3","category_id":"2","title":"iPhone 11 128GB","price":"19000000","discount":"19900000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/l\/a\/layer_19_1.jpg","description":"","created_at":"2021-10-22 12:57:16","updated_at":"2021-10-22 12:57:16","deleted":"0"},
+{"id":"4","category_id":"2","title":"iPhone 12 Pro","price":"28000000","discount":"30990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/i\/p\/iphone-12-pro-max_3__10.jpg","description":"","created_at":"2021-10-22 12:58:32","updated_at":"2021-10-22 12:58:32","deleted":"0"},
+{"id":"5","category_id":"3","title":"Samsung Galaxy Note 20 Ultra 5G","price":"21500000","discount":"32990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/y\/e\/yellow_final_2.jpg","description":null,"created_at":"2021-10-22 10:10:44","updated_at":"2021-10-22 10:10:44","deleted":"0"},
+{"id":"6","category_id":"3","title":"Samsung Galaxy Z Flip3 5G","price":"23990000","discount":"24990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/8\/0\/800x800_flip_3_cream.png","description":null,"created_at":"2021-10-22 10:10:44","updated_at":"2021-10-22 10:10:44","deleted":"0"},
+{"id":"7","category_id":"3","title":"Samsung Galaxy S21 Ultra 5G","price":"25000000","discount":"30990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/6\/3\/637462630853935725_ss-s21-ultra-den-1_1.jpg","description":null,"created_at":"2021-10-22 10:12:40","updated_at":"2021-10-22 10:12:40","deleted":"0"},
+{"id":"8","category_id":"3","title":"Samsung Galaxy A72","price":"10100000","discount":"11490000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/s\/a\/samsung-galaxy-a72-30.jpg","description":null,"created_at":"2021-10-22 10:12:40","updated_at":"2021-10-22 10:12:40","deleted":"0"},
+{"id":"10","category_id":"3","title":"Samsung Galaxy S20 FE 256GB (Fan Edition)","price":"12250000","discount":"15490000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/s\/a\/samsung-galaxy-20-fe_4_.jpg","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"11","category_id":"3","title":"Samsung Galaxy Z Fold3 5G","price":"40990000","discount":"41990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/s\/m\/sm-f926_zfold3_5g_openback_phantomgreen_210602.jpg","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"12","category_id":"3","title":"Samsung Galaxy A52s 5G","price":"10000000","discount":"10990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/0\/4\/04_2_4.png","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"13","category_id":"3","title":"Samsung Galaxy A32","price":"5650000","discount":"6690000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/s\/a\/samsung-galaxy-a32-20.jpg","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"14","category_id":"3","title":"Samsung Galaxy A12","price":"4150000","discount":"4290000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/s\/a\/samsung-galaxy-a12_2_.jpg","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"15","category_id":"3","title":"Samsung Galaxy A22 4G","price":"5600000","discount":"5890000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/a\/2\/a22-2.jpg","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"16","category_id":"3","title":"Samsung Galaxy Note 20 Ultra","price":"19200000","discount":"29990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/b\/l\/black_final.jpg","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"17","category_id":"3","title":"Samsung Galaxy S21 Plus 5G","price":"20400000","discount":"25990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/s\/a\/samsung-galaxy-s21-plus-3.jpg","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"18","category_id":"3","title":"Samsung Galaxy Z Flip3 5G 256GB","price":"25990000","discount":"26990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/8\/0\/800x800_flip_3_lavender.png","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"19","category_id":"3","title":"Samsung Galaxy A52","price":"8750000","discount":"9290000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/s\/a\/samsung-galaxy-a52-26.jpg","description":null,"created_at":"2021-10-22 12:47:54","updated_at":"2021-10-22 12:47:54","deleted":"0"},
+{"id":"20","category_id":"2","title":"iPhone 13 | Chính hãng VN\/A","price":"24990000","discount":null,"thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/i\/p\/ip13-pro_2.jpg","description":null,"created_at":"2021-10-22 12:58:32","updated_at":"2021-10-22 12:58:32","deleted":"0"},
+{"id":"21","category_id":"2","title":"iPhone 13 Pro Max | Chính hãng VN\/A","price":"33990000","discount":null,"thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/i\/p\/iphone_13-_pro-5_4.jpg","description":"Miễn phí 4G tốc độ cao 10GB\/ Tháng trong 18 tháng \n- Công nghệ Vsim ảo đầu tiên\nCấu hình vượt trội, trải nghiệm mạnh mẽ \n- Chip Helio G35 8 nhân, RAM 3GB\nMàn hình siêu rộng, xem phim thả ga - Màn hình IPS LCD 6.528 inch, viền siêu mỏng\nSử dụng cả ngày dài - Pin 5000mAh, sạc nhanh 15W","created_at":"2021-10-22 12:58:32","updated_at":"2021-10-22 12:58:32","deleted":"0"},
+{"id":"22","category_id":"2","title":"iPhone 11 I Chính hãng VN\/A","price":"16900000","discount":"18000000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/l\/a\/layer_20_1.jpg","description":"Miễn phí 4G tốc độ cao 10GB\/ Tháng trong 18 tháng \n- Công nghệ Vsim ảo đầu tiên\nCấu hình vượt trội, trải nghiệm mạnh mẽ \n- Chip Helio G35 8 nhân, RAM 3GB\nMàn hình siêu rộng, xem phim thả ga - Màn hình IPS LCD 6.528 inch, viền siêu mỏng\nSử dụng cả ngày dài - Pin 5000mAh, sạc nhanh 15W","created_at":"2021-10-22 12:58:32","updated_at":"2021-10-22 12:58:32","deleted":"0"},
+{"id":"28","category_id":"1","title":"Vsmart Star 5","price":"2690000","discount":"0","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/v\/s\/vsmart-star-5-3_3.jpg","description":"Miễn phí 4G tốc độ cao 10GB\/ Tháng trong 18 tháng \n- Công nghệ Vsim ảo đầu tiên\nCấu hình vượt trội, trải nghiệm mạnh mẽ \n- Chip Helio G35 8 nhân, RAM 3GB\nMàn hình siêu rộng, xem phim thả ga - Màn hình IPS LCD 6.528 inch, viền siêu mỏng\nSử dụng cả ngày dài - Pin 5000mAh, sạc nhanh 15W","created_at":"2021-10-25 11:30:19","updated_at":"2021-10-25 11:30:19","deleted":"0"},
+{"id":"29","category_id":"1","title":"Vsmart Joy 4","price":"3290000","discount":"0","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/v\/s\/vsmart-joy-4_2_.png","description":null,"created_at":"2021-10-25 11:34:50","updated_at":"2021-10-25 11:34:50","deleted":"0"},
+{"id":"30","category_id":"1","title":"Vsmart Joy 4 4GB","price":"3590000","discount":"0","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/v\/s\/vsmart-joy-4_1__2.png","description":null,"created_at":"2021-10-25 11:34:50","updated_at":"2021-10-25 11:34:50","deleted":"0"},
+{"id":"31","category_id":"1","title":"Vsmart Live 4","price":"4290000","discount":"0","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/v\/s\/vsmart-live-_4_3_.jpg","description":null,"created_at":"2021-10-25 11:34:50","updated_at":"2021-10-25 11:34:50","deleted":"0"},
+{"id":"32","category_id":"1","title":"Vsmart Aris 6GB 64GB","price":"4490000","discount":"5990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/1\/1\/11_1_4.png","description":null,"created_at":"2021-10-25 11:34:50","updated_at":"2021-10-25 11:34:50","deleted":"0"},
+{"id":"33","category_id":"1","title":"Vsmart Aris Pro","price":"5490000","discount":"8490000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/1\/1\/11_2_2.png","description":null,"created_at":"2021-10-25 11:38:36","updated_at":"2021-10-25 11:38:36","deleted":"0"},
+{"id":"34","category_id":"102","title":"Xiaomi Mi 11 Lite 5G","price":"8990000","discount":"10490000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/x\/i\/xiaomi-mi-11-lite-5g-2_10.png","description":null,"created_at":"2021-10-25 11:40:29","updated_at":"2021-10-25 11:40:29","deleted":"0"},
+{"id":"35","category_id":"102","title":"Xiaomi Redmi Note 10 5G","price":"4950000","discount":"5290000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/r\/e\/redmi-note-10-5g.jpg","description":null,"created_at":"2021-10-25 11:40:29","updated_at":"2021-10-25 11:40:29","deleted":"0"},
+{"id":"36","category_id":"102","title":"Xiaomi Redmi 10 (4GB - 128GB)\r\n","price":"4290000","discount":"0","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/0\/0\/001_2.jpg","description":null,"created_at":"2021-10-25 11:40:29","updated_at":"2021-10-25 11:40:29","deleted":"0"},
+{"id":"37","category_id":"102","title":"Xiaomi Redmi Note 10 Pro 8GB","price":"6090000","discount":"7490000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/x\/i\/xiaomi-redmi-note-10-pro_2_.png","description":null,"created_at":"2021-10-25 11:40:29","updated_at":"2021-10-25 11:40:29","deleted":"0"},
+{"id":"38","category_id":"102","title":"Xiaomi Redmi 10 (4GB - 64GB)","price":"3990000","discount":"0","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/0\/0\/004.jpg","description":null,"created_at":"2021-10-25 11:40:29","updated_at":"2021-10-25 11:40:29","deleted":"0"},
+{"id":"39","category_id":"102","title":"Xiaomi Redmi Note 10","price":"5100000","discount":"5490000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/x\/i\/xiaomi-redmi-note-10_1.jpg","description":null,"created_at":"2021-10-25 11:40:29","updated_at":"2021-10-25 11:40:29","deleted":"0"},
+{"id":"40","category_id":"104","title":"OPPO Reno6 5G","price":"12490000","discount":"12990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/r\/e\/reno6-1_1.jpg","description":"","created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"41","category_id":"104","title":"Oppo Reno5","price":"7790000","discount":"8690000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/o\/p\/oppo-reno-5_3_.jpg","description":"","created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"42","category_id":"104","title":"OPPO Reno6 Z 5G","price":"9190000","discount":"9490000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/o\/p\/oppo_reno6.jpg","description":"","created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"43","category_id":"104","title":"Oppo A54","price":"4350000","discount":"4690000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/o\/p\/oppo-a54-4g-black-600x600.jpg","description":"","created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"44","category_id":"104","title":"Oppo A73","price":"5190000","discount":"5490000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/o\/p\/oppo-a73_1_.jpg","description":"","created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"45","category_id":"104","title":"OPPO Find X3 Pro 5G","price":"21990000","discount":"26990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/o\/p\/oppo-find-x3-pro-5g-3_2.jpg","description":"","created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"46","category_id":"2","title":null,"price":null,"discount":null,"thumbnail":null,"description":null,"created_at":"2021-11-16 16:24:20","updated_at":"2021-11-16 16:24:20","deleted":"1"},
+{"id":"47","category_id":"2","title":"áda","price":"30900000","discount":"32990000","thumbnail":"aq","description":"aaq","created_at":"2021-11-16 16:25:24","updated_at":"2021-11-16 16:25:24","deleted":"1"},
+{"id":"48","category_id":"104","title":null,"price":null,"discount":null,"thumbnail":null,"description":null,"created_at":"2021-11-16 16:25:58","updated_at":"2021-11-16 16:25:58","deleted":"1"},
+{"id":"49","category_id":"105","title":"Nokia X10 5G","price":"5190000","discount":"5490000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/n\/o\/nokia-x10.jpg","description":null,"created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"50","category_id":"105","title":"Nokia G21","price":"3490000","discount":"4290000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/t\/h\/thumb_602966_default_big.jpg","description":null,"created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"51","category_id":"105","title":"Nokia C21 Plus 3GB 64GB\r\n","price":"2890000","discount":"3190000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/n\/o\/nokia-c21-plus-600x600_2_1.jpg","description":null,"created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"52","category_id":"105","title":"Nokia C30 2GB 32GB\r\n","price":"2390000","discount":"2999000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/6\/3\/637649100605269420_nokia-c30-xanh-1_5_1_.jpg","description":null,"created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"53","category_id":"109","title":"MacBook Pro 14 inch 2022","price":"95990000","discount":"99990000","thumbnail":"https:\/\/image.cellphones.com.vn\/358x\/media\/catalog\/product\/m\/a\/macbook-pro-14-inch-2021-32gb-1tb-1_8.jpg","description":"","created_at":null,"updated_at":null,"deleted":"0"},
+{"id":"54","category_id":"2","title":"iPhone 14 Pro 256GB | Chính hãng VN\/A","price":"3490000","discount":"3290000","thumbnail":"https:\/\/cdn2.cellphones.com.vn\/358x\/media\/catalog\/product\/t\/_\/t_m_18.png","description":"iPhone 14 Pro Max là mẫu flagship nổi bật nhất của Apple trong lần trở lại năm 2022 với nhiều cải tiến về công nghệ cũng như vẻ ngoài cao cấp, sang chảnh hợp với gu thẩm mỹ đại chúng. Những chiếc điện thoại đến từ nhà Táo Khuyết nhận được rất nhiều sự kỳ vọng của thị trường ngay từ khi chưa ra mắt. Vậy liệu những chiếc flagship đến từ công ty công nghệ hàng đầu thế giới này có làm bạn thất vọng? Cùng khám phá những điều thú vị về iPhone 14 Pro Max ở bài viết dưới đây nhé.\r\n\r\n","created_at":null,"updated_at":null,"deleted":"0"}
+]
+}
+,{"type":"table","name":"role","database":"bkstore","data":
+[
+{"id":"1","name":"User"},
+{"id":"2","name":"Admin"}
+]
+}
+,{"type":"table","name":"tokens","database":"bkstore","data":
+[
+{"user_id":"55","token":"0e60521fee975cd08f2997f22ae6b6be","created_at":"2022-06-05 06:35:37"},
+{"user_id":"55","token":"7356e583b498f530b8ac06c49a174097","created_at":"2022-11-08 16:17:15"},
+{"user_id":"55","token":"a0309454496fffae79f389cb31e15e28","created_at":"2022-11-30 13:11:50"},
+{"user_id":"56","token":"1d1d7bc20388626c9d6d0d5973af8b9a","created_at":"2022-06-05 06:38:00"},
+{"user_id":"56","token":"6b45ffbd6bc70ee4d1c0dbfaf4f32a07","created_at":"2022-11-30 13:16:09"},
+{"user_id":"56","token":"77d147a786c2b374cb8b448d938674c1","created_at":"2022-11-08 16:20:49"},
+{"user_id":"56","token":"fe5e548aae5b975896f0bfde84745d33","created_at":"2022-06-05 09:39:41"}
+]
+}
+,{"type":"table","name":"user","database":"bkstore","data":
+[
+{"id":"55","fullname":"Admin","email":"admin@gmail.com","phone_number":"1234","address":"1234","password":"b4cbd48886a5331c5eb2fedadabe311c","role_id":"2","deleted":"0"},
+{"id":"56","fullname":"tester","email":"tester@gmail.com","phone_number":"1234","address":"1234","password":"b4cbd48886a5331c5eb2fedadabe311c","role_id":"1","deleted":"0"},
+{"id":"57","fullname":"tester2","email":"tester2@gmail.com","phone_number":"123456","address":"123456","password":"b4cbd48886a5331c5eb2fedadabe311c","role_id":"1","deleted":"0"},
+{"id":"58","fullname":"tester3","email":"tester3@gmail.com","phone_number":"1234","address":"Address","password":"b4cbd48886a5331c5eb2fedadabe311c","role_id":"1","deleted":"0"}
+]
+}
+]

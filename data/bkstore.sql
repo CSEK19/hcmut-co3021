@@ -1,35 +1,32 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE
+= "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00";
-
+SET time_zone
+= "+00:00";
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Cơ sở dữ liệu: `bkstore`
---
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `category`
---
-
 CREATE DATABASE
+IF NOT EXISTS `bkstore` DEFAULT CHARACTER
+SET utf8mb4
+COLLATE utf8mb4_general_ci;
+USE `bkstore`;
 
-CREATE TABLE `category` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+CREATE TABLE `category`
+(
+  `id` int
+(11) NOT NULL,
+  `name` varchar
+(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `category`
---
-
-INSERT INTO `category` (`id`, `name`) VALUES
+INSERT INTO `category` (`
+id`,
+`name
+`) VALUES
 (1, 'Vsmart'),
 (2, 'iPhone'),
 (3, 'Samsung'),
@@ -38,57 +35,59 @@ INSERT INTO `category` (`id`, `name`) VALUES
 (105, 'Nokia'),
 (109, 'Apple');
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `feedback`
---
-
-CREATE TABLE `feedback` (
-  `id` int(11) NOT NULL,
-  `note` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `product_id` int(11) NOT NULL,
+CREATE TABLE `feedback`
+(
+  `id` int
+(11) NOT NULL,
+  `note` varchar
+(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` int
+(11) DEFAULT NULL,
+  `product_id` int
+(11) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  `status` int(11) DEFAULT 0
+  `status` int
+(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `feedback`
---
+INSERT INTO `feedback` (`
+id`,
+`note
+`, `user_id`, `product_id`, `created_at`, `updated_at`, `status`) VALUES
+(53, 'Chủ đề Hello- Nội dung Tester', 55, 48, '2022-12-05 07:17:08', '2022-06-05 07:17:08', 0),
+(54, 'Good!', 55, 21, '2022-12-05 07:17:29', '2022-06-05 07:17:29', 0),
+(55, 'Chủ đề Test_2- Nội dung None', 55, 48, '2022-12-05 07:20:33', '2022-06-05 07:20:33', 0),
+(56, 'Chủ đề Tester- Nội dung Tester', 56, 48, '2022-12-05 07:21:07', '2022-06-05 09:11:27', 0),
+(57, 'Chủ đề Alo- Nội dung Alo', 55, 48, '2022-12-05 09:46:55', '2022-06-05 09:47:25', 0);
 
-INSERT INTO `feedback` (`id`, `note`, `user_id`, `product_id`, `created_at`, `updated_at`, `status`) VALUES
-(53, 'Chủ đề Hello- Nội dung Tester', 55, 48, '2022-06-05 07:17:08', '2022-06-05 07:17:08', 0),
-(54, 'Good!', 55, 21, '2022-06-05 07:17:29', '2022-06-05 07:17:29', 0),
-(55, 'Chủ đề Test_2- Nội dung None', 55, 48, '2022-06-05 07:20:33', '2022-06-05 07:20:33', 0),
-(56, 'Chủ đề Tester- Nội dung Tester', 56, 48, '2022-06-05 07:21:07', '2022-06-05 09:11:27', 0),
-(57, 'Chủ đề Alo- Nội dung Alo', 55, 48, '2022-06-05 09:46:55', '2022-06-05 09:47:25', 0);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `orders`
---
-
-CREATE TABLE `orders` (
-  `id` int(11) NOT NULL,
-  `fullname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT 0,
-  `deleted` int(11) NOT NULL DEFAULT 0,
-  `address` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+CREATE TABLE `orders`
+(
+  `id` int
+(11) NOT NULL,
+  `fullname` varchar
+(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar
+(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar
+(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int
+(11) NOT NULL,
+  `status` int
+(11) NOT NULL DEFAULT 0,
+  `deleted` int
+(11) NOT NULL DEFAULT 0,
+  `address` varchar
+(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` datetime DEFAULT NULL,
-  `total_money` int(11) NOT NULL
+  `total_money` int
+(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `orders`
---
-
-INSERT INTO `orders` (`id`, `fullname`, `email`, `phone`, `user_id`, `status`, `deleted`, `address`, `created_at`, `total_money`) VALUES
+INSERT INTO `orders` (`
+id`,
+`fullname
+`, `email`, `phone`, `user_id`, `status`, `deleted`, `address`, `created_at`, `total_money`) VALUES
 (43, 'tester', 'tester@gmail.com', '1234', 56, 3, 0, 'HCMUT', '2022-01-01 06:38:29', 169950000),
 (44, 'tester', 'tester@gmail.com', '12345', 56, 3, 0, 'HCMUT2', '2022-02-02 11:39:03', 30900000),
 (45, 'tester_1', 'tester_1@gmail.com', '1234', 56, 3, 0, 'tester_1', '2022-03-03 06:48:12', 5490000),
@@ -102,28 +101,30 @@ INSERT INTO `orders` (`id`, `fullname`, `email`, `phone`, `user_id`, `status`, `
 (53, 'tester2', 'test@gmail.com', '1234', 56, 3, 0, '1234', '2022-11-11 07:11:51', 25990000),
 (54, 'tester', 'tester@gmail.com', '1234', 56, 3, 0, 'HCMUT', '2022-12-12 07:12:07', 115970000),
 (55, 'test_ip', '1234@yahoo.com', '1234', 56, 3, 0, '1234', '2022-06-05 14:40:25', 33990000),
-(56, 'test_ip_2', 'tester2@gmail.com', '1234', 56, 3, 0, '1234', '2022-06-05 09:40:55', 33990000);
+(56, 'test_ip_2', 'tester2@gmail.com', '1234', 56, 3, 0, '1234', '2022-06-05 09:40:55', 33990000),
+(57, 'tester2', 'da@yahoo.com.vn', '312312', 56, 3, 0, '123', '2022-11-08 16:21:36', 95990000),
+(58, 'user', 'CSE@hcmtu.edu.vn', '123121', 56, 0, 0, 'CSE', '2022-11-30 13:16:37', 191980000);
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `order_details`
---
-
-CREATE TABLE `order_details` (
-  `id` int(11) NOT NULL,
-  `order_id` int(11) DEFAULT NULL,
-  `product_id` int(11) DEFAULT NULL,
-  `price` int(11) DEFAULT NULL,
-  `num` int(11) DEFAULT NULL,
-  `total_money` int(11) DEFAULT NULL
+CREATE TABLE `order_details`
+(
+  `id` int
+(11) NOT NULL,
+  `order_id` int
+(11) DEFAULT NULL,
+  `product_id` int
+(11) DEFAULT NULL,
+  `price` int
+(11) DEFAULT NULL,
+  `num` int
+(11) DEFAULT NULL,
+  `total_money` int
+(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `order_details`
---
-
-INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `price`, `num`, `total_money`) VALUES
+INSERT INTO `order_details` (`
+id`,
+`order_id
+`, `product_id`, `price`, `num`, `total_money`) VALUES
 (78, 43, 21, 33990000, 5, 169950000),
 (79, 44, 1, 30900000, 1, 30900000),
 (80, 45, 33, 5490000, 1, 5490000),
@@ -142,50 +143,55 @@ INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `price`, `num`, `to
 (93, 54, 11, 40990000, 1, 40990000),
 (94, 54, 18, 25990000, 1, 25990000),
 (95, 55, 21, 33990000, 1, 33990000),
-(96, 56, 21, 33990000, 1, 33990000);
+(96, 56, 21, 33990000, 1, 33990000),
+(97, 57, 53, 95990000, 1, 95990000),
+(98, 58, 53, 95990000, 2, 191980000);
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `payments`
---
-
-CREATE TABLE `payments` (
-  `id` int(11) NOT NULL,
-  `order_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
+CREATE TABLE `payments`
+(
+  `id` int
+(11) NOT NULL,
+  `order_id` int
+(11) NOT NULL,
+  `user_id` int
+(11) NOT NULL,
   `money` float NOT NULL COMMENT 'số tiền thanh toán',
-  `note` varchar(255) DEFAULT NULL COMMENT 'ghi chú thanh toán',
-  `vnp_response_code` varchar(255) NOT NULL COMMENT 'mã phản hồi',
-  `code_vnpay` varchar(255) NOT NULL COMMENT 'mã giao dịch vnpay',
-  `code_bank` varchar(255) NOT NULL COMMENT 'mã ngân hàng',
+  `note` varchar
+(255) DEFAULT NULL COMMENT 'ghi chú thanh toán',
+  `vnp_response_code` varchar
+(255) NOT NULL COMMENT 'mã phản hồi',
+  `code_vnpay` varchar
+(255) NOT NULL COMMENT 'mã giao dịch vnpay',
+  `code_bank` varchar
+(255) NOT NULL COMMENT 'mã ngân hàng',
   `time` datetime NOT NULL COMMENT 'thời gian chuyển khoản'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `product`
---
-
-CREATE TABLE `product` (
-  `id` int(11) NOT NULL,
-  `category_id` int(11) DEFAULT NULL,
-  `title` varchar(350) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `price` int(11) DEFAULT NULL,
-  `discount` int(11) DEFAULT NULL,
-  `thumbnail` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+CREATE TABLE `product`
+(
+  `id` int
+(11) NOT NULL,
+  `category_id` int
+(11) DEFAULT NULL,
+  `title` varchar
+(350) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` int
+(11) DEFAULT NULL,
+  `discount` int
+(11) DEFAULT NULL,
+  `thumbnail` varchar
+(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  `deleted` int(11) DEFAULT NULL
+  `deleted` int
+(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `product`
---
-
-INSERT INTO `product` (`id`, `category_id`, `title`, `price`, `discount`, `thumbnail`, `description`, `created_at`, `updated_at`, `deleted`) VALUES
+INSERT INTO `product` (`
+id`,
+`category_id
+`, `title`, `price`, `discount`, `thumbnail`, `description`, `created_at`, `updated_at`, `deleted`) VALUES
 (1, 2, 'iPhone 12 Pro Max', 30900000, 32990000, 'https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-12-pro-max_3__10.jpg', '', '2021-10-22 07:46:26', '2021-10-22 07:46:26', 0),
 (2, 2, 'iPhone 13 Pro | Chính hãng VN/A', 30990000, NULL, 'https://image.cellphones.com.vn/358x/media/catalog/product/i/p/iphone_13-_pro-5.jpg', NULL, '2021-10-22 12:57:16', '2021-10-22 12:57:16', 0),
 (3, 2, 'iPhone 11 128GB', 19000000, 19900000, 'https://image.cellphones.com.vn/358x/media/catalog/product/l/a/layer_19_1.jpg', '', '2021-10-22 12:57:16', '2021-10-22 12:57:16', 0),
@@ -235,237 +241,197 @@ INSERT INTO `product` (`id`, `category_id`, `title`, `price`, `discount`, `thumb
 (53, 109, 'MacBook Pro 14 inch 2022', 95990000, 99990000, 'https://image.cellphones.com.vn/358x/media/catalog/product/m/a/macbook-pro-14-inch-2021-32gb-1tb-1_8.jpg', '', NULL, NULL, 0),
 (54, 2, 'iPhone 14 Pro 256GB | Chính hãng VN/A', 3490000, 3290000, 'https://cdn2.cellphones.com.vn/358x/media/catalog/product/t/_/t_m_18.png', 'iPhone 14 Pro Max là mẫu flagship nổi bật nhất của Apple trong lần trở lại năm 2022 với nhiều cải tiến về công nghệ cũng như vẻ ngoài cao cấp, sang chảnh hợp với gu thẩm mỹ đại chúng. Những chiếc điện thoại đến từ nhà Táo Khuyết nhận được rất nhiều sự kỳ vọng của thị trường ngay từ khi chưa ra mắt. Vậy liệu những chiếc flagship đến từ công ty công nghệ hàng đầu thế giới này có làm bạn thất vọng? Cùng khám phá những điều thú vị về iPhone 14 Pro Max ở bài viết dưới đây nhé.\r\n\r\n', NULL, NULL, 0);
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `role`
---
-
-CREATE TABLE `role` (
-  `id` int(11) NOT NULL,
-  `name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
+CREATE TABLE `role`
+(
+  `id` int
+(11) NOT NULL,
+  `name` varchar
+(20) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `role`
---
-
-INSERT INTO `role` (`id`, `name`) VALUES
+INSERT INTO `role` (`
+id`,
+`name
+`) VALUES
 (1, 'User'),
 (2, 'Admin');
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `tokens`
---
-
-CREATE TABLE `tokens` (
-  `user_id` int(11) NOT NULL,
-  `token` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
+CREATE TABLE `tokens`
+(
+  `user_id` int
+(11) NOT NULL,
+  `token` varchar
+(32) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `tokens`
---
-
-INSERT INTO `tokens` (`user_id`, `token`, `created_at`) VALUES
+INSERT INTO `tokens` (`
+user_id`,
+`token
+`, `created_at`) VALUES
 (55, '0e60521fee975cd08f2997f22ae6b6be', '2022-06-05 06:35:37'),
+(55, '7356e583b498f530b8ac06c49a174097', '2022-11-08 16:17:15'),
+(55, 'a0309454496fffae79f389cb31e15e28', '2022-11-30 13:11:50'),
 (56, '1d1d7bc20388626c9d6d0d5973af8b9a', '2022-06-05 06:38:00'),
+(56, '6b45ffbd6bc70ee4d1c0dbfaf4f32a07', '2022-11-30 13:16:09'),
+(56, '77d147a786c2b374cb8b448d938674c1', '2022-11-08 16:20:49'),
 (56, 'fe5e548aae5b975896f0bfde84745d33', '2022-06-05 09:39:41');
 
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `user`
---
-
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `fullname` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone_number` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `role_id` int(11) DEFAULT NULL,
-  `deleted` int(11) NOT NULL
+CREATE TABLE `user`
+(
+  `id` int
+(11) NOT NULL,
+  `fullname` varchar
+(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar
+(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone_number` varchar
+(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar
+(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar
+(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role_id` int
+(11) DEFAULT NULL,
+  `deleted` int
+(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `user`
---
-
-INSERT INTO `user` (`id`, `fullname`, `email`, `phone_number`, `address`, `password`, `role_id`, `deleted`) VALUES
+INSERT INTO `user`
+  (`id`, `fullname
+`, `email`, `phone_number`, `address`, `password`, `role_id`, `deleted`) VALUES
 (55, 'Admin', 'admin@gmail.com', '1234', '1234', 'b4cbd48886a5331c5eb2fedadabe311c', 2, 0),
 (56, 'tester', 'tester@gmail.com', '1234', '1234', 'b4cbd48886a5331c5eb2fedadabe311c', 1, 0),
-(57, 'tester2', 'tester2@gmail.com', '123456', '123456', 'b4cbd48886a5331c5eb2fedadabe311c', 1, 0);
+(57, 'tester2', 'tester2@gmail.com', '123456', '123456', 'b4cbd48886a5331c5eb2fedadabe311c', 1, 0),
+(58, 'tester3', 'tester3@gmail.com', '1234', 'Address', 'b4cbd48886a5331c5eb2fedadabe311c', 1, 0);
 
---
--- Chỉ mục cho các bảng đã đổ
---
 
---
--- Chỉ mục cho bảng `category`
---
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
+ADD PRIMARY KEY
+(`id`);
 
---
--- Chỉ mục cho bảng `feedback`
---
 ALTER TABLE `feedback`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `userreview` (`user_id`),
-  ADD KEY `productreview` (`product_id`);
+ADD PRIMARY KEY
+(`id`),
+ADD KEY `userreview`
+(`user_id`),
+ADD KEY `productreview`
+(`product_id`);
 
---
--- Chỉ mục cho bảng `orders`
---
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_orderSuccess` (`user_id`);
+ADD PRIMARY KEY
+(`id`),
+ADD KEY `fk_orderSuccess`
+(`user_id`);
 
---
--- Chỉ mục cho bảng `order_details`
---
 ALTER TABLE `order_details`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`),
-  ADD KEY `a` (`order_id`);
+ADD PRIMARY KEY
+(`id`),
+ADD KEY `product_id`
+(`product_id`),
+ADD KEY `a`
+(`order_id`);
 
---
--- Chỉ mục cho bảng `payments`
---
 ALTER TABLE `payments`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `paymentUserid` (`user_id`);
+ADD PRIMARY KEY
+(`id`),
+ADD KEY `paymentUserid`
+(`user_id`);
 
---
--- Chỉ mục cho bảng `product`
---
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `category_id` (`category_id`);
+ADD PRIMARY KEY
+(`id`),
+ADD KEY `category_id`
+(`category_id`);
 
---
--- Chỉ mục cho bảng `role`
---
 ALTER TABLE `role`
-  ADD PRIMARY KEY (`id`);
+ADD PRIMARY KEY
+(`id`);
 
---
--- Chỉ mục cho bảng `tokens`
---
 ALTER TABLE `tokens`
-  ADD PRIMARY KEY (`user_id`,`token`);
+ADD PRIMARY KEY
+(`user_id`,`token`);
 
---
--- Chỉ mục cho bảng `user`
---
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `role_id` (`role_id`);
+ADD PRIMARY KEY
+(`id`),
+ADD KEY `role_id`
+(`role_id`);
 
---
--- AUTO_INCREMENT cho các bảng đã đổ
---
 
---
--- AUTO_INCREMENT cho bảng `category`
---
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
---
--- AUTO_INCREMENT cho bảng `feedback`
---
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
---
--- AUTO_INCREMENT cho bảng `orders`
---
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
---
--- AUTO_INCREMENT cho bảng `order_details`
---
 ALTER TABLE `order_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
---
--- AUTO_INCREMENT cho bảng `payments`
---
 ALTER TABLE `payments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
---
--- AUTO_INCREMENT cho bảng `product`
---
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
---
--- AUTO_INCREMENT cho bảng `role`
---
 ALTER TABLE `role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
---
--- AUTO_INCREMENT cho bảng `user`
---
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
---
--- Các ràng buộc cho các bảng đã đổ
---
 
---
--- Các ràng buộc cho bảng `feedback`
---
 ALTER TABLE `feedback`
-  ADD CONSTRAINT `productreview` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `userreview` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+ADD CONSTRAINT `productreview` FOREIGN KEY
+(`product_id`) REFERENCES `product`
+(`id`),
+ADD CONSTRAINT `userreview` FOREIGN KEY
+(`user_id`) REFERENCES `user`
+(`id`);
 
---
--- Các ràng buộc cho bảng `orders`
---
 ALTER TABLE `orders`
-  ADD CONSTRAINT `fk_orderSuccess` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+ADD CONSTRAINT `fk_orderSuccess` FOREIGN KEY
+(`user_id`) REFERENCES `user`
+(`id`);
 
---
--- Các ràng buộc cho bảng `order_details`
---
 ALTER TABLE `order_details`
-  ADD CONSTRAINT `a` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
-  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
+ADD CONSTRAINT `a` FOREIGN KEY
+(`order_id`) REFERENCES `orders`
+(`id`),
+ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY
+(`product_id`) REFERENCES `product`
+(`id`);
 
---
--- Các ràng buộc cho bảng `payments`
---
 ALTER TABLE `payments`
-  ADD CONSTRAINT `paymentUserid` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+ADD CONSTRAINT `paymentUserid` FOREIGN KEY
+(`user_id`) REFERENCES `user`
+(`id`);
 
---
--- Các ràng buộc cho bảng `product`
---
 ALTER TABLE `product`
-  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
+ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY
+(`category_id`) REFERENCES `category`
+(`id`);
 
---
--- Các ràng buộc cho bảng `tokens`
---
 ALTER TABLE `tokens`
-  ADD CONSTRAINT `fk_token` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+ADD CONSTRAINT `fk_token` FOREIGN KEY
+(`user_id`) REFERENCES `user`
+(`id`);
 
---
--- Các ràng buộc cho bảng `user`
---
 ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);
+ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY
+(`role_id`) REFERENCES `role`
+(`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
